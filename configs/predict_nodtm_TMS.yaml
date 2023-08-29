@@ -1,0 +1,22 @@
+name: height_swiss_predict_set_nodtm
+
+path_cfg:
+  s2_dir: 'height-swiss/igp_psr/data/CH_VHM/sentinel_2'
+  out_dir: 'height-swiss/outputimg_splityear/predict_tiles_dtm_821' 
+  stat_path: 'height-swiss/outputimg_splityear/stats_total.yaml'
+  checkpoint_dir: 'train_logs' 
+  s1_asc_path: null
+  s1_dec_path: null
+
+# use only single model
+onemodel: 'folder-of-model'
+
+years: ['2017', '2018', '2019', '2020']
+tiles: ['32TMS'] #, '32TMT', '32TLT', '32TNS', '32TNT', '32TLS'] 
+patch_size: 512
+num_workers: 8
+batch_size: 1
+weightedavg: False # not used for normal regression model
+
+
+

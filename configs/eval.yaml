@@ -1,0 +1,17 @@
+name: height_swiss_predict_set_evaluation
+
+path_cfg:
+  target_dir: 'height-swiss/data/CH/VHM/sentinel2_tiles'
+  out_dir: 'height-swiss/outputimg_splityear/predict_tiles_dtm_829/' 
+  yearmask_dir: 'height-swiss/outputimg_splityear'
+
+years: ['2017', '2018', '2019', '2020']
+tiles: ['32TMS', '32TMT', '32TLT', '32TNS', '32TNT', '32TLS']
+trainvalshp: ['height-swiss/data/split_shp/ch_train.shp', 'height-swiss/data/split_shp/ch_val.shp', '/cluster/work/igp_psr/jiangyc/height-swiss/data/split_shp/ch_all.shp']
+variables: ['mean', 'max']
+
+eval_cfg:
+    nogt40: True # not evaluate mean height>40 locations
+    perYTS: True # errors per year per tile per split
+    perYS: True # errors per year per split
+    val: True # total errors in valiation split
