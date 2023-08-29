@@ -7,7 +7,7 @@ The generated vegetation height maps of Switzerland (including both the mean & m
 - temporal coverage: 2017, 2018, 2019, 2020
 - spatial coverage: the whole Switzerland
 
-
+![demo_map_2019](./assets/wsl_map_2017.jpg)
 
 
 ## Requirements
