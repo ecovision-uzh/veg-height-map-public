@@ -10,6 +10,9 @@ The generated vegetation height maps of Switzerland (including both the mean & m
 ![demo_map_2019](./assets/wsl_map_2017.jpg)
 
 
+
+<br/>
+
 ## :herb: Requirements 
 
 - Python 3.8.5
@@ -60,6 +63,10 @@ python -m scripts.predictSet --pred_config_path=configs/predict_nodtm_TMS.yaml -
 ```
 python -m scripts.eval --config=configs/eval.yaml
 ```
+
+<br/>
+
+
 
 ## :seedling: Citation  :seedling:
 ```
