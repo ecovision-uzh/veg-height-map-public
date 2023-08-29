@@ -1,0 +1,33 @@
+name: height_swiss
+
+split_year: True
+noveg_mask: False # only trained with vegetated pixels
+
+# path control
+image_dir: 'height-swiss/data/CH_VHM/sentinel_2'
+target_dir: 'height-swiss/data/CH/VHM/sentinel2_tiles'
+output_dir: 'height-swiss/outputimg_splityear'
+log_dir: 'logs/logs'
+yearshp_dir: 'height-swiss/data/split_shp/years'
+s2_stats_dir: 'height-swiss/s2_stats'
+
+# settings of dataset
+tiles: ['32TNS', '32TNT', '32TLT', '32TMS', '32TMT'] 
+years: ['2020', '2017', '2018', '2019']
+variables: ['mean', 'max']
+patch_size: 15
+trainvalshp: ['height-swiss/data/split_shp/ch_train.shp', 'height-swiss/data/split_shp/ch_val.shp', 'height-swiss/data/split_shp/ch_all.shp']
+
+# settings of s2 images (total num img = num_date * num_orbit)
+num_date: 1
+
+sample_tiles:
+        num_date_dict: 
+                32TLT: 1
+                32TMS: 1
+                32TMT: 1
+                32TNS: 1
+                32TNT: 1
+                32TLS: 1
+num_orbit: 2
+cloud_thresh: 10

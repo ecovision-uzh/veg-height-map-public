@@ -1,0 +1,46 @@
+name: height_swiss_train_spyr_wDTM
+
+# dataset and data loader control
+data_cfg:
+  h5_dir: 'height-swiss/outputimg_splityear'
+  dtm_dir: 'height-swiss/data/CH/DTM/sentinel2_tiles'
+  subsample: 0.005 
+  tiles: ['32TMS', '32TLS',  '32TLT', '32TMT', '32TNS', '32TNT']
+  patch_size: 15
+  normalize_img: True
+  normalize_labels: False
+  loader_args:
+    batch_size: 64
+    num_workers: 4
+    pin_memory: True
+  iter_train: 1000
+  iter_val: 500
+  train_val_split: True
+
+# model control
+model_cfg:
+  type: 'resnext'
+  train_type: 'mse'  # ['nll', 'mse']
+  layers: [2,3,5,3]
+  groups: 32
+  width_per_group: 4
+  use_pixel_shortcut: True
+  use_s1_block: False
+
+# train control
+train_cfg:
+  random_seed: 12345
+  deterministic: True
+  resume_checkpoint: null 
+  epochs: 500
+  lr: 0.00001
+  weight_decay: 0.001
+  positive_mean: True
+  scheduler:
+    milestones: [1000]
+
+# log control
+log_cfg:
+    labels_names: ['mean', 'max']
+    use_wandb_logger: True
+    log_plot: False
