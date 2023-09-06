@@ -70,4 +70,12 @@ python -m scripts.eval --config=configs/eval.yaml
 
 ## :seedling: Citation  :seedling:
 ```
+@article{jiang2023accuracy,
+  title={Accuracy and consistency of space-based vegetation height maps for forest dynamics in alpine terrain},
+  author={Jiang, Yuchang and R{\"u}etschi, Marius and Garnot, Vivien Sainte Fare and Marty, Mauro and Schindler, Konrad and Ginzler, Christian and Wegner, Jan D},
+  journal={Science of Remote Sensing},
+  pages={100099},
+  year={2023},
+  publisher={Elsevier}
+}
 ```
