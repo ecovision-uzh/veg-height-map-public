@@ -1,5 +1,5 @@
 # veg-height-map-public
-Countrywide Vegetation Height Estimation with Sentinel-2 and Deep Learning
+[SRS 2023] Countrywide Vegetation Height Estimation with Sentinel-2 and Deep Learning
 
 ## :evergreen_tree: Data Availability :evergreen_tree:
 The generated vegetation height maps of Switzerland (including both the mean & max height) are public accessible [please download here](https://doi.org/10.5281/zenodo.8283347)
